@@ -1,0 +1,32 @@
+div {
+    position: fixed;
+    width: 10vmax;
+    height: 10vmax;
+    background-color: red;
+    border-radius: 50% 50%;
+    left: 0vw; /*Pego el circulo a la izquierda*/
+}
+
+@keyframes mover {
+    from {left: 0vw;}
+    to {left: calc(100vw - 10vmax) ;} /*Se puede poner directamente o con la funcion calc */
+}
+
+div {
+    animation: mover 1s linear 1s infinite alternate running;
+    /*linear es la timing function 
+    infinite */
+}
+li:hover{
+    transform: scale(2); /**/
+    display: block;
+    width: 10vw;
+
+}
+li {
+    transition: transform 2s;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
